@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Thân Gửi My</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- Retro paper grain overlay -->
+        <div class="grain-overlay" aria-hidden="true"></div>
+
+        <!-- Confetti canvas for RSVP confirmation -->
+        <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+        <main class="stage">
+            <!-- ==================== ENVELOPE INTRO ==================== -->
+            <section
+                id="envelope-screen"
+                class="envelope-screen"
+                aria-label="Phong bì thư mời"
+            >
+                <div class="envelope-wrapper">
+                    <div
+                        class="envelope"
+                        id="envelope"
+                        role="button"
+                        tabindex="0"
+                        aria-label="Mở thư mời gửi My"
+                    >
+                        <div class="envelope-back"></div>
+
+                        <div class="letter-preview">
+                            <div class="retro-stripes mini">
+                                <span></span><span></span><span></span
+                                ><span></span><span></span><span></span>
+                            </div>
+                            <p class="preview-kicker">THƯ MỜI ĐẶC BIỆT</p>
+                            <p class="preview-title">
+                                Kế hoạch Tối nay &amp; Ngày mai
+                            </p>
+                        </div>
+
+                        <div class="envelope-front">
+                            <div class="airmail-border"></div>
+                            <div class="envelope-address">
+                                <div class="stamp-box">
+                                    <span class="stamp-label">HÀ NỘI</span>
+                                    <span class="stamp-icon">★</span>
+                                    <span class="stamp-sub">VIP</span>
+                                </div>
+                                <div class="to-block">
+                                    <span class="to-label">GỬI ĐẾN:</span>
+                                    <h1 class="to-name">My ♥</h1>
+                                    <p class="to-note">Nhấn để mở lịch trình</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="envelope-flap"></div>
+                        <div class="wax-seal" aria-hidden="true">
+                            <span>M</span>
+                        </div>
+                    </div>
+
+                    <button
+                        type="button"
+                        id="open-btn"
+                        class="retro-btn primary-btn"
+                    >
+                        <span>Mở thư mời</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- ==================== INVITATION CARD ==================== -->
+            <article
+                id="invitation-card"
+                class="invitation-card hidden"
+                aria-label="Nội dung thư mời"
+            >
+                <!-- Top 6-color retro stripe banner -->
+                <div class="retro-stripes" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span
+                    ><span></span><span></span>
+                </div>
+
+                <!-- Ticket / Postcard Header -->
+                <header class="card-header">
+                    <div class="header-meta">
+                        <span class="mono-tag"
+                            >NO. 01 // SPECIAL INVITATION</span
+                        >
+                        <span class="mono-tag">HANOI RETRO EDITION</span>
+                    </div>
+
+                    <div class="title-block">
+                        <p class="eyebrow">Thân gửi My,</p>
+                        <h2 class="main-title">
+                            Lịch Hẹn Tối Nay &amp; Ngày Mai
+                        </h2>
+                        <p class="subtitle">
+                            Một chiếc thư mời nhỏ với đầy đủ kế hoạch từ tối nay
+                            đến hết đêm mai. My chọn các option mình thích rồi
+                            bấm chốt kèo nhé!
+                        </p>
+                    </div>
+
+                    <!-- Decorative vintage stamp -->
+                    <div class="header-badge" aria-hidden="true">
+                        <div class="badge-inner">
+                            <span>DATE</span>
+                            <strong>PASS</strong>
+                            <span>2 DAYS</span>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="perforation" aria-hidden="true">
+                    <span class="notch left"></span>
+                    <span class="dash-line"></span>
+                    <span class="notch right"></span>
+                </div>
+
+                <!-- ==================== DAY 1: TONIGHT ==================== -->
+                <section
+                    class="schedule-section"
+                    aria-labelledby="tonight-heading"
+                >
+                    <div class="section-heading">
+                        <div class="day-pill terracotta">PHẦN I • TỐI NAY</div>
+                        <h3 id="tonight-heading">Đi dạo đêm &amp; Boardgame</h3>
+                    </div>
+
+                    <ol class="timeline">
+                        <li class="timeline-item">
+                            <div class="time-col">
+                                <span class="time-badge">21:00</span>
+                            </div>
+                            <div class="content-col">
+                                <div class="event-card">
+                                    <div class="event-top">
+                                        <h4>Qua đón My</h4>
+                                        <span class="tag">Khởi hành</span>
+                                    </div>
+                                    <p>
+                                        Chuẩn bị sẵn sàng, nhớ mặc ấm nếu đi dạo
+                                        tối nha.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="timeline-item">
+                            <div class="time-col">
+                                <span class="time-badge">21:45 – 23:30</span>
+                            </div>
+                            <div class="content-col">
+                                <div class="event-card interactive-card">
+                                    <div class="event-top">
+                                        <h4>Đi dạo hóng gió</h4>
+                                        <span class="tag pick-tag"
+                                            >Chọn 1 địa điểm</span
+                                        >
+                                    </div>
+                                    <p>My muốn tối nay tụi mình lượn hồ nào?</p>
+                                    <div
+                                        class="choice-group"
+                                        data-group="tonightPlace"
+                                        role="radiogroup"
+                                        aria-label="Chọn hồ đi dạo"
+                                    >
+                                        <button
+                                            type="button"
+                                            class="choice-chip active"
+                                            data-value="Hồ Tây"
+                                            aria-checked="true"
+                                            role="radio"
+                                        >
+                                            <span class="chip-dot"></span>Hồ Tây
+                                        </button>
+                                        <button
+                                            type="button"
+                                            class="choice-chip"
+                                            data-value="Hồ Gươm"
+                                            aria-checked="false"
+                                            role="radio"
+                                        >
+                                            <span class="chip-dot"></span>Hồ
+                                            Gươm
+                                        </button>
+                                        <button
+                                            type="button"
+                                            class="choice-chip"
+                                            data-value="Hồ Văn Quán"
+                                            aria-checked="false"
+                                            role="radio"
+                                        >
+                                            <span class="chip-dot"></span>Hồ Văn
+                                            Quán
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="timeline-item">
+                            <div class="time-col">
+                                <span class="time-badge">23:30</span>
+                            </div>
+                            <div class="content-col">
+                                <div class="event-card interactive-card">
+                                    <div class="event-top">
+                                        <h4>Tăng hai đêm khuya</h4>
+                                        <span class="tag pick-tag"
+                                            >Chọn hoạt động</span
+                                        >
+                                    </div>
+                                    <p>
+                                        Sau khi dạo hồ xong mình chốt phương án
+                                        nào đây?
+                                    </p>
+                                    <div
+                                        class="choice-group"
+                                        data-group="tonightAfter"
+                                        role="radiogroup"
+                                        aria-label="Chọn hoạt động lúc 23h30"
+                                    >
+                                        <button
+                                            type="button"
+                                            class="choice-chip active"
+                                            data-value="Về lại GS25 chơi boardgame"
+                                            aria-checked="true"
+                                            role="radio"
+                                        >
+                                            <span class="chip-dot"></span>Về lại
+                                            GS25 chơi boardgame
+                                        </button>
+                                        <button
+                                            type="button"
+                                            class="choice-chip"
+                                            data-value="Về ngủ"
+                                            aria-checked="false"
+                                            role="radio"
+                                        >
+                                            <span class="chip-dot"></span>Về ngủ
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </section>
+
+                <div class="section-divider" aria-hidden="true">
+                    <span>✦</span><span>✦</span><span>✦</span>
+                </div>
+
+                <!-- ==================== DAY 2: TOMORROW ==================== -->
+                <section
+                    class="schedule-section"
+                    aria-labelledby="tomorrow-heading"
+                >
+                    <div class="section-heading">
+                        <div class="day-pill slate">PHẦN II • NGÀY MAI</div>
+                        <h3 id="tomorrow-heading">
+                            Sáng tự chọn • Trưa study • Tối cafe
+                        </h3>
+                    </div>
+
+                    <!-- Morning Options Selector -->
+                    <div class="morning-box">
+                        <div class="morning-header">
+                            <span class="mono-tag"
+                                >BUỔI SÁNG • CHỌN 1 TRONG 2 OPTION</span
+                            >
+                        </div>
+
+                        <div
+                            class="option-grid"
+                            role="radiogroup"
+                            aria-label="Chọn kế hoạch buổi sáng ngày mai"
+                        >
+                            <button
+                                type="button"
+                                class="option-card"
+                                data-morning="opt1"
+                                aria-checked="false"
+                                role="radio"
+                            >
+                                <div class="option-head">
+                                    <span class="opt-code">OPTION 01</span>
+                                    <span class="opt-radio"></span>
+                                </div>
+                                <h4>Ngủ</h4>
+                                <p>
+                                    Ngủ nướng nạp pin thật đầy, giữ sức cho buổi
+                                    trưa và chiều.
+                                </p>
+                            </button>
+
+                            <button
+                                type="button"
+                                class="option-card active"
+                                data-morning="opt2"
+                                aria-checked="true"
+                                role="radio"
+                            >
+                                <div class="option-head">
+                                    <span class="opt-code">OPTION 02</span>
+                                    <span class="opt-radio"></span>
+                                </div>
+                                <h4>Dậy sớm đi chơi lễ</h4>
+                                <ul class="mini-plan">
+                                    <li><strong>07:30</strong> — Đi ăn sáng</li>
+                                    <li>
+                                        <strong>08:00</strong> — Tham quan các
+                                        địa điểm vui chơi đang mở free ngày lễ
+                                    </li>
+                                </ul>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Afternoon + Evening Timeline -->
+                    <div class="sub-label">TRƯA + CHIỀU + TỐI</div>
+                    <ol class="timeline">
+                        <li class="timeline-item">
+                            <div class="time-col">
+                                <span class="time-badge sage"
+                                    >12:00 – 12:30</span
+                                >
+                            </div>
+                            <div class="content-col">
+                                <div class="event-card">
+                                    <div class="event-top">
+                                        <h4>Ăn trưa</h4>
+                                        <span class="tag">Nạp năng lượng</span>
+                                    </div>
+                                    <p>
+                                        Ăn nhẹ nhàng trước khi vào ca tập trung
+                                        buổi chiều.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="timeline-item">
+                            <div class="time-col">
+                                <span class="time-badge sage"
+                                    >12:30 – 16:00</span
+                                >
+                            </div>
+                            <div class="content-col">
+                                <div class="event-card">
+                                    <div class="event-top">
+                                        <h4>Study ở chỗ hôm nọ</h4>
+                                        <span class="tag">Focus Mode</span>
+                                    </div>
+                                    <p>
+                                        Cùng nhau học tập / làm việc tại góc
+                                        quen hôm trước.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="timeline-item">
+                            <div class="time-col">
+                                <span class="time-badge mustard"
+                                    >18:00 – 19:00</span
+                                >
+                            </div>
+                            <div class="content-col">
+                                <div class="event-card">
+                                    <div class="event-top">
+                                        <h4>Ăn tối</h4>
+                                        <span class="tag">Dinner</span>
+                                    </div>
+                                    <p>
+                                        Thưởng thức bữa tối sau giờ study chăm
+                                        chỉ.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="timeline-item">
+                            <div class="time-col">
+                                <span class="time-badge mustard"
+                                    >19:00 – Đêm</span
+                                >
+                            </div>
+                            <div class="content-col">
+                                <div class="event-card">
+                                    <div class="event-top">
+                                        <h4>Cafe</h4>
+                                        <span class="tag"
+                                            >Chill &amp; Talk</span
+                                        >
+                                    </div>
+                                    <p>
+                                        Ngồi cafe nói chuyện, nghe nhạc và khép
+                                        lại ngày lễ thật vui.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </section>
+
+                <div class="perforation" aria-hidden="true">
+                    <span class="notch left"></span>
+                    <span class="dash-line"></span>
+                    <span class="notch right"></span>
+                </div>
+
+                <!-- ==================== INTERACTIVE RSVP / SUMMARY ==================== -->
+                <section class="rsvp-section" aria-label="Xác nhận lịch hẹn">
+                    <div class="rsvp-box">
+                        <div class="rsvp-header">
+                            <span class="mono-tag"
+                                >TICKET STUB // LỰA CHỌN CỦA MY</span
+                            >
+                            <div
+                                id="rubber-stamp"
+                                class="rubber-stamp"
+                                aria-hidden="true"
+                            >
+                                ĐÃ CHỐT KÈO ✓
+                            </div>
+                        </div>
+
+                        <div class="summary-preview" id="summary-preview">
+                            <!-- Populated dynamically by script.js -->
+                        </div>
+
+                        <div class="note-field">
+                            <label for="my-note"
+                                >Lời nhắn thêm (tuỳ chọn):</label
+                            >
+                            <input
+                                type="text"
+                                id="my-note"
+                                maxlength="120"
+                                placeholder="Ví dụ: Em muốn ăn món gì đó ấm bụng, hoặc mang theo..."
+                            />
+                        </div>
+
+                        <div class="action-row">
+                            <button
+                                type="button"
+                                id="confirm-btn"
+                                class="retro-btn primary-btn"
+                            >
+                                <span>Chốt lịch hẹn ♥</span>
+                            </button>
+                            <button
+                                type="button"
+                                id="copy-btn"
+                                class="retro-btn secondary-btn"
+                            >
+                                <span>Sao chép lịch đã chọn</span>
+                            </button>
+                            <button
+                                type="button"
+                                id="print-btn"
+                                class="retro-btn ghost-btn"
+                            >
+                                <span>In / Lưu vé</span>
+                            </button>
+                        </div>
+
+                        <p
+                            id="status-msg"
+                            class="status-msg"
+                            role="status"
+                            aria-live="polite"
+                        ></p>
+                    </div>
+                </section>
+
+                <!-- Bottom retro stripes -->
+                <div class="retro-stripes bottom" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span
+                    ><span></span><span></span>
+                </div>
+            </article>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>
