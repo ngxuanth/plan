@@ -16,9 +16,6 @@
         <!-- Retro paper grain overlay -->
         <div class="grain-overlay" aria-hidden="true"></div>
 
-        <!-- Confetti canvas for RSVP confirmation -->
-        <canvas id="confetti-canvas" aria-hidden="true"></canvas>
-
         <main class="stage">
             <!-- ==================== ENVELOPE INTRO ==================== -->
             <section
@@ -108,8 +105,8 @@
                         </h2>
                         <p class="subtitle">
                             Một chiếc thư mời nhỏ với đầy đủ kế hoạch từ tối nay
-                            đến hết đêm mai. My chọn các option mình thích rồi
-                            bấm chốt kèo nhé!
+                            đến hết đêm mai. My xem qua và chọn các option mình
+                            thích nhé!
                         </p>
                     </div>
 
@@ -414,77 +411,6 @@
                             </div>
                         </li>
                     </ol>
-                </section>
-
-                <div class="perforation" aria-hidden="true">
-                    <span class="notch left"></span>
-                    <span class="dash-line"></span>
-                    <span class="notch right"></span>
-                </div>
-
-                <!-- ==================== INTERACTIVE RSVP / SUMMARY ==================== -->
-                <section class="rsvp-section" aria-label="Xác nhận lịch hẹn">
-                    <div class="rsvp-box">
-                        <div class="rsvp-header">
-                            <span class="mono-tag"
-                                >TICKET STUB // LỰA CHỌN CỦA MY</span
-                            >
-                            <div
-                                id="rubber-stamp"
-                                class="rubber-stamp"
-                                aria-hidden="true"
-                            >
-                                ĐÃ CHỐT KÈO ✓
-                            </div>
-                        </div>
-
-                        <div class="summary-preview" id="summary-preview">
-                            <!-- Populated dynamically by script.js -->
-                        </div>
-
-                        <div class="note-field">
-                            <label for="my-note"
-                                >Lời nhắn thêm (tuỳ chọn):</label
-                            >
-                            <input
-                                type="text"
-                                id="my-note"
-                                maxlength="120"
-                                placeholder="Ví dụ: Em muốn ăn món gì đó ấm bụng, hoặc mang theo..."
-                            />
-                        </div>
-
-                        <div class="action-row">
-                            <button
-                                type="button"
-                                id="confirm-btn"
-                                class="retro-btn primary-btn"
-                            >
-                                <span>Chốt lịch hẹn ♥</span>
-                            </button>
-                            <button
-                                type="button"
-                                id="copy-btn"
-                                class="retro-btn secondary-btn"
-                            >
-                                <span>Sao chép lịch đã chọn</span>
-                            </button>
-                            <button
-                                type="button"
-                                id="print-btn"
-                                class="retro-btn ghost-btn"
-                            >
-                                <span>In / Lưu vé</span>
-                            </button>
-                        </div>
-
-                        <p
-                            id="status-msg"
-                            class="status-msg"
-                            role="status"
-                            aria-live="polite"
-                        ></p>
-                    </div>
                 </section>
 
                 <!-- Bottom retro stripes -->
